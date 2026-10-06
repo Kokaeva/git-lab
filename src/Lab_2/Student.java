@@ -128,6 +128,7 @@ public class Student {
     }
 
     // Задание c: сортировка по фамилиям
+    // задание c
     public static void sortByName() {
         Arrays.sort(students, (a, b) -> a.getName().compareToIgnoreCase(b.getName()));
         System.out.println("Массив упорядочен по фамилиям.");

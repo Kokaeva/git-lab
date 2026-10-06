@@ -3,7 +3,6 @@ package Lab_2;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Student {
     private String name;       // фамилия студента
@@ -11,21 +10,6 @@ public class Student {
     private String end;        // что окончил
     private String lang;       // какой язык изучал
 
-    private static Student[] students;
-
-    // Один общий Scanner в UTF-8
-    public static final Scanner sc = new Scanner(System.in, StandardCharsets.UTF_8);
-
-    // Статический блок инициализации
-    static {
-        students = new Student[] {
-                new Student("Иван",     true,  "ВУЗ",        "немецкий"),
-                new Student("Мария",    false, "школа",      "английский"),
-                new Student("Миша",     false, "ВУЗ",        "английский"),
-                new Student("Петров",   true,  "Техникум",   "французский"),
-                new Student("Сидоров",  true,  "Техникум",   "французский")
-        };
-    }
 
     // Конструктор с параметрами
     public Student(String name, boolean hostel, String end, String lang) {

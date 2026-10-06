@@ -103,6 +103,7 @@ public class Student {
     }
 
     // Задание a: сколько человек нуждаются в общежитии
+    // задание а
     public static void countHostel() {
         int count = 0;
         for (Student s : students) {

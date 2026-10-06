@@ -113,6 +113,7 @@ public class Student {
     }
 
     // Задание b: студенты, изучавшие французский язык в техникуме
+    // задание b
     public static void listFrenchFromCollege() {
         System.out.println("\nИзучавшие французский язык в техникуме:");
         boolean found = false;

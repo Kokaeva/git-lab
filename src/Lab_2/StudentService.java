@@ -39,6 +39,15 @@ public class StudentService {
             System.out.println(s);
         }
     }
+    // Задание a: сколько человек нуждаются в общежитии
+    // задание а
+    public static void countHostel() {
+        int count = 0;
+        for (Student s : students) {
+            if (s.getHostel()) count++;
+        }
+        System.out.println("Нуждаются в общежитии: " + count + " чел.");
+    }
 
 
 }

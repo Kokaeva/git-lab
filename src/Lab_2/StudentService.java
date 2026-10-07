@@ -19,4 +19,19 @@ public class StudentService {
                 new Student("Сидоров",  true,  "Техникум",   "французский")
         };
     }
+    // Заполнение массива с консоли
+    public static void fillStudents() {
+        System.out.print("Введите количество студентов: ");
+        int n = sc.nextInt();
+        sc.nextLine(); // очистка буфера после nextInt
+
+        students = new Student[n];
+        System.out.println("Введите информацию о студентах:");
+        for (int i = 0; i < students.length; i++) {
+            System.out.println("Студент " + (i + 1) + ":");
+            students[i] = new Student();
+        }
+    }
+
+
 }

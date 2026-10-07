@@ -32,6 +32,13 @@ public class StudentService {
             students[i] = new Student();
         }
     }
+    // Печать массива
+    public static void printStudents() {
+        System.out.println("\nСписок студентов:");
+        for (Student s : students) {
+            System.out.println(s);
+        }
+    }
 
 
 }

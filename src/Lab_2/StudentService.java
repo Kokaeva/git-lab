@@ -48,6 +48,20 @@ public class StudentService {
         }
         System.out.println("Нуждаются в общежитии: " + count + " чел.");
     }
+    // Задание b: студенты, изучавшие французский язык в техникуме
+    // задание b
+    public static void listFrenchFromCollege() {
+        System.out.println("\nИзучавшие французский язык в техникуме:");
+        boolean found = false;
+        for (Student s : students) {
+            if (s.getLang().equalsIgnoreCase("французский")
+                    && s.getEnd().toLowerCase().contains("техникум")) {
+                System.out.println(s);
+                found = true;
+            }
+        }
+        if (!found) System.out.println("Не найдено.");
+    }
 
 
 }

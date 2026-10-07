@@ -1,6 +1,7 @@
 package Lab_2;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StudentService {
@@ -61,6 +62,12 @@ public class StudentService {
             }
         }
         if (!found) System.out.println("Не найдено.");
+    }
+    // Задание c: сортировка по фамилиям
+    // задание c
+    public static void sortByName() {
+        Arrays.sort(students, (a, b) -> a.getName().compareToIgnoreCase(b.getName()));
+        System.out.println("Массив упорядочен по фамилиям.");
     }
 
 

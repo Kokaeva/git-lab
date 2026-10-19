@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Main {
     public static void main(String[] args) {
-        // Принудительно выводим в UTF-8 — убирает «кракозябры» при выводе
+        // Принудительно выводим в UTF-8
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
         while (true) {
@@ -18,16 +18,18 @@ public class Main {
             System.out.println("6. Выход");
             System.out.print("Выбор: ");
 
-            int choice = Student.sc.nextInt();
-            Student.sc.nextLine(); // очистка буфера после nextInt
+            // Теперь обращаемся к сканеру из StudentService
+            int choice = StudentService.sc.nextInt();
+            StudentService.sc.nextLine(); // очистка буфера
 
             switch (choice) {
-                case 1: Student.fillStudents();           break;
-                case 2: Student.printStudents();          break;
-                case 3: Student.countHostel();            break;
-                case 4: Student.listFrenchFromCollege();  break;
-                case 5: Student.sortByName();             break;
-                case 6: System.out.println("Выход.");     return;
+                // Вызываем методы из StudentService
+                case 1: StudentService.fillStudents();          break;
+                case 2: StudentService.printStudents();         break;
+                case 3: StudentService.countHostel();           break;
+                case 4: StudentService.listFrenchFromCollege(); break;
+                case 5: StudentService.sortByName();            break;
+                case 6: System.out.println("Выход.");           return;
                 default: System.out.println("Неверный пункт.");
             }
         }

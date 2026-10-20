@@ -16,8 +16,8 @@ public class StudentService {
                 new Student("Иван",     true,  "ВУЗ",        "немецкий"),
                 new Student("Мария",    false, "школа",      "английский"),
                 new Student("Миша",     false, "ВУЗ",        "английский"),
-                new Student("Саша",   true,  "Техникум",   "французский"),
-                new Student("Анита",  true,  "Техникум",   "французский")
+                new Student("Петров",   true,  "Техникум",   "французский"),
+                new Student("Сидоров",  true,  "Техникум",   "французский")
         };
     }
     // Заполнение массива с консоли
@@ -71,13 +71,6 @@ public class StudentService {
     }
     public static Student findByName(String name){
         System.out.println("Поиск в feature:" + name);
-        for(Student s: students){
-            if (s.getName().equalsIgnoreCase(name)) return s;
-        }
-        return null;
-    }
-    public static Student searchByName(String name){
-        System.out.println("Поиск в master:" + name);
         for(Student s: students){
             if (s.getName().equalsIgnoreCase(name)) return s;
         }

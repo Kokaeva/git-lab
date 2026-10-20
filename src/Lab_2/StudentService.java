@@ -76,6 +76,13 @@ public class StudentService {
         }
         return null;
     }
+    public static Student searchByName(String name){
+        System.out.println("Поиск в master:" + name);
+        for(Student s: students){
+            if (s.getName().equalsIgnoreCase(name)) return s;
+        }
+        return null;
+    }
 
 
 }
